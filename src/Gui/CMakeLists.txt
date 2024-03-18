@@ -822,6 +822,7 @@ SET(View3D_CPP_SRCS
     OpenCascadeNavigationStyle.cpp
     OpenSCADNavigationStyle.cpp
     TinkerCADNavigationStyle.cpp
+    SideNavigationStyle.cpp
     TouchpadNavigationStyle.cpp
     GestureNavigationStyle.cpp
     SplitView3DInventor.cpp
