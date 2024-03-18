@@ -207,6 +207,12 @@ MouseP::mouseButtonEvent(QMouseEvent * event)
   case Qt::MiddleButton:
     this->mousebutton->setButton(SoMouseButtonEvent::BUTTON3);
     break;
+  case Qt::BackButton:
+    this->mousebutton->setButton(SoMouseButtonEvent::BUTTON4);
+    break;
+  case Qt::ForwardButton:
+    this->mousebutton->setButton(SoMouseButtonEvent::BUTTON5);
+    break;
   default:
     this->mousebutton->setButton(SoMouseButtonEvent::ANY);
     SoDebugError::postInfo("Mouse::mouseButtonEvent",

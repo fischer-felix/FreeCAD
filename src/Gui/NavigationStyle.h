@@ -253,7 +253,7 @@ protected:
     SbBool lockrecenter;
     SbBool menuenabled;
     SbBool ctrldown, shiftdown, altdown;
-    SbBool button1down, button2down, button3down;
+    SbBool button1down, button2down, button3down, button4down, button5down;
     SbBool invertZoom;
     SbBool zoomAtCursor;
     float zoomStep;
@@ -365,6 +365,23 @@ class GuiExport BlenderNavigationStyle : public UserNavigationStyle {
 public:
     BlenderNavigationStyle();
     ~BlenderNavigationStyle() override;
+    const char* mouseButtons(ViewerMode) override;
+
+protected:
+    SbBool processSoEvent(const SoEvent * const ev) override;
+
+private:
+    SbBool lockButton1{false};
+};
+
+class GuiExport SideNavigationStyle : public UserNavigationStyle {
+    using inherited = UserNavigationStyle;
+
+    TYPESYSTEM_HEADER_WITH_OVERRIDE();
+
+public:
+    SideNavigationStyle();
+    ~SideNavigationStyle() override;
     const char* mouseButtons(ViewerMode) override;
 
 protected:

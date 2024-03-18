@@ -235,6 +235,8 @@ void NavigationStyle::initialize()
     this->button1down = false;
     this->button2down = false;
     this->button3down = false;
+    this->button4down = false;
+    this->button5down = false;
     this->ctrldown = false;
     this->shiftdown = false;
     this->altdown = false;
@@ -1542,6 +1544,12 @@ void NavigationStyle::syncWithEvent(const SoEvent * const ev)
             break;
         case SoMouseButtonEvent::BUTTON3:
             this->button3down = press;
+            break;
+        case SoMouseButtonEvent::BUTTON4:
+            this->button4down = press;
+            break;
+        case SoMouseButtonEvent::BUTTON5:
+            this->button5down = press;
             break;
         default:
             break;
